@@ -1,0 +1,37 @@
+# Normalize line endings across all platforms
+* text=auto
+
+# Shell scripts (macOS/Linux) should use LF
+*.sh text eol=lf
+
+# Windows scripts use CRLF
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Source code (Java, JS, etc.) should always use LF
+*.java text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+
+# Configuration files
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.xml text eol=lf
+*.properties text eol=lf
+*.env text eol=lf
+
+# Ignore binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+
+# Logs
+*.log text eol=lf
