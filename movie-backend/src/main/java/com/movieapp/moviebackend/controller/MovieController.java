@@ -1,12 +1,13 @@
 package com.movieapp.moviebackend.controller;
 
-
 import com.movieapp.moviebackend.model.Movie;
+import com.movieapp.moviebackend.service.ExternalMovieService;
 import com.movieapp.moviebackend.service.MovieService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,10 +16,30 @@ import java.util.Optional;
 public class MovieController {
 
     private final MovieService movieService;
+    private final ExternalMovieService externalMovieService;
 
-    public MovieController(MovieService movieService) {
+
+    public MovieController(MovieService movieService, ExternalMovieService externalMovieService) {
         this.movieService = movieService;
+        this.externalMovieService = externalMovieService;
     }
+
+    // Búsqueda de películas usando tanto la base de datos local como la API externa
+    @GetMapping("/search")
+    public ResponseEntity<List<Movie>> searchMovies(@RequestParam String title, @RequestParam(defaultValue = "false") boolean external) {
+        List<Movie> movies = new ArrayList<>();
+
+        // Si external=true, consultar la API externa
+        if (external) {
+            movies.addAll(externalMovieService.searchMoviesByTitle(title));
+        } else {
+            // Si no, buscar en la base de datos local
+            movies.addAll(movieService.getMoviesByTitle(title));
+        }
+
+        return ResponseEntity.ok(movies);
+    }
+
 
     // Obtener todas las películas
     @GetMapping
@@ -63,13 +84,6 @@ public class MovieController {
     @GetMapping("/genre/{genre}")
     public ResponseEntity<List<Movie>> getMoviesByGenre(@PathVariable String genre) {
         List<Movie> movies = movieService.getMoviesByGenre(genre);
-        return ResponseEntity.ok(movies);
-    }
-
-    // Búsqueda personalizada: Películas por título (contiene)
-    @GetMapping("/search")
-    public ResponseEntity<List<Movie>> getMoviesByTitle(@RequestParam String title) {
-        List<Movie> movies = movieService.getMoviesByTitle(title);
         return ResponseEntity.ok(movies);
     }
 
