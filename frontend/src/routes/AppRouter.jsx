@@ -5,7 +5,7 @@ import Explore from '../vistas/Explore';
 import MovieDetail from '../vistas/MovieDetails';
 import Favorites from '../vistas/Favorites';
 import Profile from '../vistas/Profile';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 
 const AppRouter = () => {
   return (
