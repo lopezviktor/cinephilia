@@ -1,30 +1,41 @@
-import React from 'react'
-import './StreamerAvailability.css'
+import React from 'react';
+import './StreamerAvailability.css';
 
-const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w45';
+// Importa los logos desde la carpeta correcta
+import NetflixLogo from '../../assets/logos/netflix.png';
+import DisneyLogo from '../../assets/logos/disney.png';
+import MaxLogo from '../../assets/logos/max.png';
+import PrimeLogo from '../../assets/logos/prime.png';
+
+// Asocia los provider_id con los logos
+const logos = {
+    8: NetflixLogo,
+    119: DisneyLogo,
+    9: PrimeLogo,
+    384: MaxLogo
+};
 
 function StreamerAvailability({ platforms = [] }) {
     return (
         <div className="streaming-availability">
-            <h4>Disponible en:</h4>
             <div className="platforms">
                 {platforms.length > 0 ? (
-                platforms.map(platform => (
-                    <div key={platform.provider_id} className="platform">
-                    <img 
-                        src={`${IMAGE_BASE_URL}/${platform.logo_path}`} 
-                        alt={platform.provider_name} 
-                        className="platform-logo"
-                    />
-                    <span>{platform.provider_name}</span>
-                    </div>
-                ))
+                    platforms.map(platform => (
+                        logos[platform.provider_id] ? (
+                            <img 
+                                key={platform.provider_id} 
+                                src={logos[platform.provider_id]} 
+                                alt={platform.provider_name} 
+                                className="platform-logo"
+                            />
+                        ) : null
+                    ))
                 ) : (
-                <p>No disponible en plataformas de streaming.</p>
+                    <p>No disponible en plataformas de streaming.</p>
                 )}
             </div>
         </div>
     );
 }
 
-export default StreamerAvailability
+export default StreamerAvailability;

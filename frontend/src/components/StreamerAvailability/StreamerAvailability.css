@@ -3,9 +3,8 @@
 ========================== */
 .streaming-availability {
   padding: 10px;
-  background-color: #1c1c1c;
+  background-color: #ffffff52;
   border-radius: 10px;
-  margin-top: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: #f5f5f5;
 }
@@ -28,14 +27,12 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
-  margin-top: 10px;
 }
 
 /* ==========================
     Tarjeta de cada plataforma
 ========================== */
 .platform {
-  background-color: #2c2c2c;
   border-radius: 8px;
   padding: 8px 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -54,9 +51,9 @@
     Logo de la plataforma
 ========================== */
 .platform-logo {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }

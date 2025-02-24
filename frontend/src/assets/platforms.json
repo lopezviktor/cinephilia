@@ -1,0 +1,22 @@
+[
+  {
+    "provider_id": 8,
+    "provider_name": "Netflix",
+    "logo_path": "/src/assets/logos/netflix.png"
+  },
+  {
+    "provider_id": 119,
+    "provider_name": "Disney Plus",
+    "logo_path": "/src/assets/logos/disney.png"
+  },
+  {
+    "provider_id": 9,
+    "provider_name": "Amazon Prime",
+    "logo_path": "/src/assets/logos/prime.png"
+  },
+  {
+    "provider_id": 384,
+    "provider_name": "HBO Max",
+    "logo_path": "/src/assets/logos/max.png"
+  }
+]

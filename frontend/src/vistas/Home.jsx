@@ -3,6 +3,7 @@ import SearchBar from '../components/SearchBar/SearchBar';
 import MovieCard from '../components/MovieCard/MovieCard';
 import movies from '../assets/movies.json';
 import genres from '../assets/genres.json';
+import platformsData from '../assets/platforms.json';
 
 const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -34,7 +35,9 @@ const Home = () => {
               year={movie.release_date.split('-')[0]} 
               rating={movie.rating} 
               poster={movie.poster_path} 
-              platforms={movie.platforms} 
+              platforms={movie.platforms.map(id => 
+                platformsData.find(platform => platform.provider_id === id)
+              ).filter(platform => platform)} 
               genreNames={getGenreNames(movie.genre_ids)}
             />
           ))

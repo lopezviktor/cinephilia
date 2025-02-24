@@ -4,6 +4,7 @@ import FilterBar from '../components/FilterBar/FilterBar';
 import MovieCard from '../components/MovieCard/MovieCard';
 import genres from '../assets/genres.json';
 import movies from '../assets/movies.json';
+import platformsData from '../assets/platforms.json';
 import './Explore.css';
 
 function Explore() {
@@ -68,7 +69,9 @@ function Explore() {
               year={movie.release_date.split('-')[0]} 
               rating={movie.rating} 
               poster={movie.poster_path} 
-              platforms={movie.platforms} 
+              platforms={movie.platforms.map(id => 
+                platformsData.find(platform => platform.provider_id === id)
+              ).filter(platform => platform)} 
               genreNames={getGenreNames(movie.genre_ids)}
             />
           ))

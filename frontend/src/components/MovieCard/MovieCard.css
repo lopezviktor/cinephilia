@@ -2,15 +2,18 @@
     Contenedor de MovieCard
 ========================== */
 .movie-card {
-  background-color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1f1f1f;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  width: 100%;
-  max-width: 280px;
-  margin: 0 auto;
+  padding: 10px;
+  max-width: 250px;
+  min-height: 550px;  /* Incremento de altura para uniformidad */
+  color: #fff;
+  transition: transform 0.2s;
 }
 
 .movie-card:hover {
@@ -36,65 +39,75 @@
     Información de la película
 ========================== */
 .movie-info {
-  padding: 15px;
+  flex-grow: 1;
+  padding: 10px;
   text-align: center;
   color: #f5f5f5;
 }
 
-.movie-info h3 {
+.movie-title {
   font-size: 1.2em;
-  margin-bottom: 5px;
+  font-weight: bold;
+  margin: 5px 0;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.movie-info p {
-  margin: 5px 0;
-  color: #b1b1b1;
+.movie-year {
+  font-size: 0.9em;
+  color: #bbb;
+  text-align: center;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-rating {
+  font-size: 0.9em;
+  color: #f5c518;
+  text-align: center;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-genres {
+  font-size: 0.8em;
+  color: #bbb;
+  text-align: center;
+  min-height: 45px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ==========================
-    Botón de favoritos
+    Botón de Favoritos
 ========================== */
 .favorite-button {
-  background: none;
+  text-align: center;
+  font-size: 1.5em;
+  color: #ccc;
+  background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 1.8em;
-  transition: transform 0.3s ease, color 0.3s ease;
-  margin-top: 10px;
+  transition: transform 0.2s;
 }
 
 .favorite-button:hover {
   transform: scale(1.2);
+  color: #f5c518;
 }
 
-.favorite-button.active {
-  color: #e50914;  /* Rojo Netflix */
-}
-
-.favorite-button:not(.active) {
-  color: #f5f5f5;
-}
-
-/* ==========================
-    Plataformas de Streaming
-========================== */
-.streaming-platforms {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.streaming-platforms img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-.streaming-platforms img:hover {
+.fav-active {
+  color: red;
   transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================

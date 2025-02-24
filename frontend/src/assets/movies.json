@@ -7,18 +7,7 @@
     "genre_ids": [28, 878],
     "rating": 8.7,
     "poster_path": "https://picsum.photos/200/300",
-    "platforms": [
-      {
-        "provider_id": 8,
-        "provider_name": "Netflix",
-        "logo_path": "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg"
-      },
-      {
-        "provider_id": 119,
-        "provider_name": "Disney Plus",
-        "logo_path": "/emthp39XA2YScoYL1p0sdbAH2WA.jpg"
-      }
-    ]
+    "platforms": [8, 119]
   },
   {
     "id": 2,
@@ -28,18 +17,7 @@
     "genre_ids": [28, 878, 53],
     "rating": 8.8,
     "poster_path": "https://picsum.photos/200/300",
-    "platforms": [
-      {
-        "provider_id": 8,
-        "provider_name": "Netflix",
-        "logo_path": "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg"
-      },
-      {
-        "provider_id": 9,
-        "provider_name": "Amazon Prime",
-        "logo_path": "/emthp39XA2YScoYL1p0sdbAH2WA.jpg"
-      }
-    ]
+    "platforms": [8, 9]
   },
   {
     "id": 3,
@@ -49,18 +27,7 @@
     "genre_ids": [80, 35, 53],
     "rating": 8.9,
     "poster_path": "https://picsum.photos/200/300",
-    "platforms": [
-      {
-        "provider_id": 119,
-        "provider_name": "Disney Plus",
-        "logo_path": "/emthp39XA2YScoYL1p0sdbAH2WA.jpg"
-      },
-      {
-        "provider_id": 384,
-        "provider_name": "HBO Max",
-        "logo_path": "/nm8d7P7MJNiBLdgIzUK0gkuEA4r.jpg"
-      }
-    ]
+    "platforms": [119, 384]
   },
   {
     "id": 4,
@@ -70,18 +37,7 @@
     "genre_ids": [28, 80, 18],
     "rating": 9.0,
     "poster_path": "https://picsum.photos/200/300",
-    "platforms": [
-      {
-        "provider_id": 8,
-        "provider_name": "Netflix",
-        "logo_path": "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg"
-      },
-      {
-        "provider_id": 384,
-        "provider_name": "HBO Max",
-        "logo_path": "/nm8d7P7MJNiBLdgIzUK0gkuEA4r.jpg"
-      }
-    ]
+    "platforms": [8, 384]
   },
   {
     "id": 5,
@@ -91,18 +47,7 @@
     "genre_ids": [12, 878, 18],
     "rating": 8.6,
     "poster_path": "https://picsum.photos/200/300",
-    "platforms": [
-      {
-        "provider_id": 9,
-        "provider_name": "Amazon Prime",
-        "logo_path": "/emthp39XA2YScoYL1p0sdbAH2WA.jpg"
-      },
-      {
-        "provider_id": 119,
-        "provider_name": "Disney Plus",
-        "logo_path": "/emthp39XA2YScoYL1p0sdbAH2WA.jpg"
-      }
-    ]
+    "platforms": [9, 119]
   },
   {
     "id": 6,
@@ -112,7 +57,7 @@
     "genre_ids": [16, 10751, 18],
     "rating": 8.5,
     "poster_path": "https://picsum.photos/200/300",
-    "platforms": ["disney"]
+    "platforms": [119]
   },
   {
     "id": 7,
@@ -122,7 +67,7 @@
     "genre_ids": [35, 18, 10749],
     "rating": 8.8,
     "poster_path": "https://picsum.photos/200/300",
-    "platforms": ["prime", "hbo"]
+    "platforms": [9, 384]
   },
   {
     "id": 8,
@@ -132,7 +77,7 @@
     "genre_ids": [18, 53],
     "rating": 8.8,
     "poster_path": "https://picsum.photos/200/300",
-    "platforms": ["netflix"]
+    "platforms": [8]
   },
   {
     "id": 9,
@@ -142,7 +87,7 @@
     "genre_ids": [80, 18],
     "rating": 9.2,
     "poster_path": "https://picsum.photos/200/300",
-    "platforms": ["prime"]
+    "platforms": [384]
   },
   {
     "id": 10,
@@ -152,6 +97,6 @@
     "genre_ids": [18, 80],
     "rating": 9.3,
     "poster_path": "https://picsum.photos/200/300",
-    "platforms": ["hbo"]
+    "platforms": [9]
   }
 ]

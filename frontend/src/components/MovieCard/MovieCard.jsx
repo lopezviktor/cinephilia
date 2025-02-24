@@ -19,19 +19,19 @@ function MovieCard({ id, title, year, rating, poster, platforms, genreNames }) {
     return (
       <div className="movie-card">
         <img 
-          src={poster || 'https://picsum.photos/200/300'} 
+          src={poster || 'https://via.placeholder.com/200x300'} 
           alt={title} 
           className="movie-poster" 
         />
         <div className="movie-info">
-          <h3>{title}</h3>
-          <p>{year}</p>
-          <p>⭐ {rating}</p>
-          <p>Géneros: {genreNames}</p>  {/* ⬅️ Muestra los géneros */}
+          <h3 className="movie-title">{title}</h3>
+          <p className="movie-year">{year}</p>
+          <p className="movie-rating">⭐ {rating}</p>
+          <p className="movie-genres">Géneros: {genreNames}</p>  
         </div>
-        <StreamerAvailability platforms={platforms} />  {/* ⬅️ Pasa las plataformas */}
+        <StreamerAvailability platforms={platforms.filter(platform => platform)} />        
         <button 
-          className="favorite-button" 
+          className={`favorite-button ${isFav ? 'fav-active' : ''}`} 
           onClick={handleFavorite}
         >
           {isFav ? '❤️' : '🤍'}
