@@ -57,7 +57,7 @@ function Explore() {
 
   return (
     <div>
-      <h1>Explorar 🎥</h1>
+      <h1>Explorar</h1>
       <FilterBar />
       <div className="movie-grid">
         {filteredMovies.length > 0 ? (

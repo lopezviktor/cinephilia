@@ -11,7 +11,7 @@
   overflow: hidden;
   padding: 10px;
   max-width: 250px;
-  min-height: 550px;  /* Incremento de altura para uniformidad */
+  min-height: 500px;  /* Incremento de altura para uniformidad */
   color: #fff;
   transition: transform 0.2s;
 }

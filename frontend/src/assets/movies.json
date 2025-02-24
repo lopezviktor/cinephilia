@@ -98,5 +98,205 @@
     "rating": 9.3,
     "poster_path": "https://picsum.photos/200/300",
     "platforms": [9]
+  },
+  {
+    "id": 11,
+    "title": "The Prestige",
+    "overview": "Dos magos rivales compiten por la supremacía.",
+    "release_date": "2006-10-20",
+    "genre_ids": [18, 53],
+    "rating": 8.5,
+    "poster_path": "https://picsum.photos/200/300?random=11",
+    "platforms": [8, 9]
+  },
+  {
+    "id": 12,
+    "title": "Memento",
+    "overview": "Un hombre con pérdida de memoria a corto plazo busca la verdad sobre el asesinato de su esposa.",
+    "release_date": "2000-10-11",
+    "genre_ids": [9648, 53],
+    "rating": 8.4,
+    "poster_path": "https://picsum.photos/200/300?random=12",
+    "platforms": [119, 384]
+  },
+  {
+    "id": 13,
+    "title": "Gladiator",
+    "overview": "Un general romano busca venganza.",
+    "release_date": "2000-05-05",
+    "genre_ids": [28, 18, 36],
+    "rating": 8.5,
+    "poster_path": "https://picsum.photos/200/300?random=13",
+    "platforms": [8, 384]
+  },
+  {
+    "id": 14,
+    "title": "The Departed",
+    "overview": "Un policía encubierto y un topo en la fuerza se enfrentan.",
+    "release_date": "2006-10-06",
+    "genre_ids": [80, 18, 53],
+    "rating": 8.5,
+    "poster_path": "https://picsum.photos/200/300?random=14",
+    "platforms": [9, 384]
+  },
+  {
+    "id": 15,
+    "title": "Whiplash",
+    "overview": "Un talentoso baterista se enfrenta a un profesor exigente en un conservatorio de música.",
+    "release_date": "2014-10-10",
+    "genre_ids": [18, 10402],
+    "rating": 8.5,
+    "poster_path": "https://picsum.photos/200/300?random=15",
+    "platforms": [8, 119]
+  },
+  {
+    "id": 16,
+    "title": "Parasite",
+    "overview": "La codicia y la discriminación de clases amenazan una relación simbiótica.",
+    "release_date": "2019-05-30",
+    "genre_ids": [35, 18, 53],
+    "rating": 8.6,
+    "poster_path": "https://picsum.photos/200/300?random=16",
+    "platforms": [384, 119]
+  },
+  {
+    "id": 17,
+    "title": "1917",
+    "overview": "Dos soldados británicos reciben una misión crucial durante la Primera Guerra Mundial.",
+    "release_date": "2019-12-25",
+    "genre_ids": [10752, 18, 36],
+    "rating": 8.3,
+    "poster_path": "https://picsum.photos/200/300?random=17",
+    "platforms": [9, 8]
+  },
+  {
+    "id": 18,
+    "title": "The Irishman",
+    "overview": "Un asesino a sueldo rememora su posible implicación en el asesinato de Jimmy Hoffa.",
+    "release_date": "2019-11-01",
+    "genre_ids": [80, 18, 36],
+    "rating": 7.8,
+    "poster_path": "https://picsum.photos/200/300?random=18",
+    "platforms": [8, 9, 384]
+  },
+  {
+    "id": 19,
+    "title": "Django Unchained",
+    "overview": "Con la ayuda de un cazador de recompensas, un esclavo liberado se lanza a rescatar a su esposa.",
+    "release_date": "2012-12-25",
+    "genre_ids": [37, 18, 80],
+    "rating": 8.4,
+    "poster_path": "https://picsum.photos/200/300?random=19",
+    "platforms": [119, 384]
+  },
+  {
+    "id": 20,
+    "title": "Inglourious Basterds",
+    "overview": "Un grupo de soldados judío-americanos trama asesinar líderes nazis en la Francia ocupada.",
+    "release_date": "2009-08-21",
+    "genre_ids": [18, 53, 10752],
+    "rating": 8.3,
+    "poster_path": "https://picsum.photos/200/300?random=20",
+    "platforms": [8, 384]
+  },
+  {
+    "id": 21,
+    "title": "No Country for Old Men",
+    "overview": "La violencia estalla tras que un cazador encuentre un negocio de drogas fallido.",
+    "release_date": "2007-11-09",
+    "genre_ids": [80, 53, 18],
+    "rating": 8.1,
+    "poster_path": "https://picsum.photos/200/300?random=21",
+    "platforms": [119, 9]
+  },
+  {
+    "id": 22,
+    "title": "The Social Network",
+    "overview": "La fundación de Facebook y las controversias legales que siguieron.",
+    "release_date": "2010-10-01",
+    "genre_ids": [18, 35],
+    "rating": 7.7,
+    "poster_path": "https://picsum.photos/200/300?random=22",
+    "platforms": [8, 119]
+  },
+  {
+    "id": 23,
+    "title": "Mad Max: Fury Road",
+    "overview": "En un páramo postapocalíptico, una mujer se rebela contra un tirano.",
+    "release_date": "2015-05-15",
+    "genre_ids": [28, 12, 53],
+    "rating": 8.1,
+    "poster_path": "https://picsum.photos/200/300?random=23",
+    "platforms": [384, 8]
+  },
+  {
+    "id": 24,
+    "title": "The Revenant",
+    "overview": "Un aventurero lucha por sobrevivir tras ser atacado por un oso.",
+    "release_date": "2015-12-25",
+    "genre_ids": [28, 18, 53],
+    "rating": 8.0,
+    "poster_path": "https://picsum.photos/200/300?random=24",
+    "platforms": [9, 384]
+  },
+  {
+    "id": 25,
+    "title": "La La Land",
+    "overview": "Un pianista y una aspirante a actriz se enamoran en Los Ángeles.",
+    "release_date": "2016-12-09",
+    "genre_ids": [35, 18, 10749],
+    "rating": 8.0,
+    "poster_path": "https://picsum.photos/200/300?random=25",
+    "platforms": [119, 8]
+  },
+  {
+    "id": 26,
+    "title": "Her",
+    "overview": "Un escritor solitario entabla una relación con un sistema operativo avanzado.",
+    "release_date": "2013-12-18",
+    "genre_ids": [18, 10749, 878],
+    "rating": 8.0,
+    "poster_path": "https://picsum.photos/200/300?random=26",
+    "platforms": [8, 9]
+  },
+  {
+    "id": 27,
+    "title": "Blade Runner 2049",
+    "overview": "Un blade runner descubre un secreto que lo lleva a buscar al desaparecido Rick Deckard.",
+    "release_date": "2017-10-06",
+    "genre_ids": [878, 28, 53],
+    "rating": 8.0,
+    "poster_path": "https://picsum.photos/200/300?random=27",
+    "platforms": [384, 119]
+  },
+  {
+    "id": 28,
+    "title": "The Wolf of Wall Street",
+    "overview": "La historia real de Jordan Belfort, un corredor de bolsa con excesos.",
+    "release_date": "2013-12-25",
+    "genre_ids": [80, 35, 18],
+    "rating": 8.2,
+    "poster_path": "https://picsum.photos/200/300?random=28",
+    "platforms": [9, 8]
+  },
+  {
+    "id": 29,
+    "title": "Catch Me If You Can",
+    "overview": "La historia de Frank Abagnale Jr., quien se hizo pasar por piloto y doctor.",
+    "release_date": "2002-12-25",
+    "genre_ids": [80, 18],
+    "rating": 8.1,
+    "poster_path": "https://picsum.photos/200/300?random=29",
+    "platforms": [119, 9]
+  },
+  {
+    "id": 30,
+    "title": "The Truman Show",
+    "overview": "Un vendedor de seguros descubre que su vida es un reality show.",
+    "release_date": "1998-06-05",
+    "genre_ids": [18, 35],
+    "rating": 8.1,
+    "poster_path": "https://picsum.photos/200/300?random=30",
+    "platforms": [8, 384]
   }
 ]

@@ -2,10 +2,10 @@ import React from 'react';
 import './StreamerAvailability.css';
 
 // Importa los logos desde la carpeta correcta
-import NetflixLogo from '../../assets/logos/netflix.png';
-import DisneyLogo from '../../assets/logos/disney.png';
-import MaxLogo from '../../assets/logos/max.png';
-import PrimeLogo from '../../assets/logos/prime.png';
+import NetflixLogo from '../../assets/logos/netflix.jpeg';
+import DisneyLogo from '../../assets/logos/disney.jpeg';
+import MaxLogo from '../../assets/logos/max.jpeg';
+import PrimeLogo from '../../assets/logos/prime.jpeg';
 
 // Asocia los provider_id con los logos
 const logos = {

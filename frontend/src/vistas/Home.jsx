@@ -23,8 +23,8 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <h1>Películas y Series Populares</h1>
       <SearchBar />
-      <h2>Películas y Series Populares</h2>
       <div className="movie-grid">
         {popularMovies.length > 0 ? (
           popularMovies.map(movie => (

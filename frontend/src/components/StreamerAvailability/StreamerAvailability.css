@@ -3,7 +3,7 @@
 ========================== */
 .streaming-availability {
   padding: 10px;
-  background-color: #ffffff52;
+  background-color: rgba(255, 255, 255, 0.3); 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: #f5f5f5;
@@ -53,7 +53,7 @@
 .platform-logo {
   width: 40px;
   height: 40px;
-  border-radius: 10%;
+  border-radius: 15%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }

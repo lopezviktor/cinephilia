@@ -17,7 +17,7 @@ function Favorites() {
   
   return (
     <div className="favorites-container">
-      <h1>Favoritos ⭐</h1>
+      <h1>Favoritos</h1>
       {favorites.length > 0 ? (
         <div className="movie-grid">
           {favorites.map(movie => (
