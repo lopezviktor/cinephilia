@@ -1,6 +1,13 @@
-.movies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-  }
+/* ==========================
+    Contenedor de MovieGrid
+========================== */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}

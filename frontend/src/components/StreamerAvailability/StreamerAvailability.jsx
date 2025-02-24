@@ -12,7 +12,7 @@ function StreamerAvailability({ platforms = [] }) {
                 platforms.map(platform => (
                     <div key={platform.provider_id} className="platform">
                     <img 
-                        src={`${IMAGE_BASE_URL}${platform.logo_path}`} 
+                        src={`${IMAGE_BASE_URL}/${platform.logo_path}`} 
                         alt={platform.provider_name} 
                         className="platform-logo"
                     />

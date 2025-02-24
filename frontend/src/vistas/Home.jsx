@@ -24,7 +24,7 @@ const Home = () => {
     <div className="home-container">
       <SearchBar />
       <h2>Películas y Series Populares</h2>
-      <div className="movies-grid">
+      <div className="movie-grid">
         {popularMovies.length > 0 ? (
           popularMovies.map(movie => (
             <MovieCard 

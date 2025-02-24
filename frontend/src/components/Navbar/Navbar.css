@@ -1,31 +1,100 @@
+/* ==========================
+    Estilos generales del Navbar
+========================== */
 .navbar {
+  width: 100%;
+  background-color: #1c1c1c;
+  color: var(--text-light);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background-color: #1c1c1e;
-  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.navbar-logo a {
-  font-size: 1.5em;
-  color: #61dafb;
-  text-decoration: none;
-  font-weight: bold;
+.navbar h2 {
+  color: #f5c518;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.navbar-links {
-  list-style: none;
+.navbar ul {
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
+  list-style: none;
 }
 
-.navbar-links li a {
-  color: #fff;
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li a {
+  color: rgba(255, 255, 255, 0.87);
   text-decoration: none;
-  transition: color 0.3s;
+  font-size: 1rem;
+  transition: color var(--transition);
 }
 
-.navbar-links li a:hover {
-  color: #61dafb;
+.navbar ul li a:hover {
+  color: #f5c518;
+}
+
+/* ==========================
+    Menú hamburguesa (Oculto en escritorio)
+========================== */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-light);
+  transition: all var(--transition);
+}
+
+/* ==========================
+    Responsividad
+========================== */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1c1c1c;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 }

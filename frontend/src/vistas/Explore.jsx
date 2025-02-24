@@ -58,7 +58,7 @@ function Explore() {
     <div>
       <h1>Explorar 🎥</h1>
       <FilterBar />
-      <div className="movies-grid">
+      <div className="movie-grid">
         {filteredMovies.length > 0 ? (
           filteredMovies.map(movie => (
             <MovieCard 
