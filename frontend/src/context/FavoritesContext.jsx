@@ -13,7 +13,13 @@ export const FavoritesProvider = ({ children }) => {
     }, [favorites]);
 
     const addFavorite = (movie) => {
-        setFavorites((prevFavorites) => [...prevFavorites, movie]);
+        setFavorites((prevFavorites) => {
+            // Verifica si ya está en favoritos
+            if (!prevFavorites.some(fav => fav.id === movie.id)) {
+                return [...prevFavorites, movie];
+            }
+            return prevFavorites;
+        });
     };
 
     const removeFavorite = (id) => {

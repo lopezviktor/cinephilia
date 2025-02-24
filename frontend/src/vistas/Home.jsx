@@ -1,34 +1,46 @@
-import React from 'react'
-import SearchBar from '../components/SearchBar/SearchBar'
+import React, { useState, useEffect } from 'react';
+import SearchBar from '../components/SearchBar/SearchBar';
 import MovieCard from '../components/MovieCard/MovieCard';
+import movies from '../assets/movies.json';
+import genres from '../assets/genres.json';
 
-function Home() {
+const Home = () => {
+  const [popularMovies, setPopularMovies] = useState([]);
+
+  useEffect(() => {
+    // Filtra las películas populares (por ejemplo, rating mayor a 8.5)
+    const popular = movies.filter(movie => parseFloat(movie.rating) > 8.5);
+    setPopularMovies(popular);
+  }, []);
+
+  const getGenreNames = (genreIds) => {
+    return genreIds.map(id => {
+      const genre = genres.find(g => g.id === id);
+      return genre ? genre.name : '';
+    }).join(', ');
+  };
+
   return (
     <div className="home-container">
       <SearchBar />
       <h2>Películas y Series Populares</h2>
       <div className="movies-grid">
-        <MovieCard 
-            id="1"
-            title="The Matrix" 
-            year="1999" 
-            rating="8.7" 
-            poster="https://via.placeholder.com/200x300" 
-          />
-          <MovieCard 
-            id="2"
-            title="Inception" 
-            year="2010" 
-            rating="8.8" 
-            poster="https://via.placeholder.com/200x300" 
-          />
-          <MovieCard 
-            id="3"
-            title="Breaking Bad" 
-            year="2008" 
-            rating="9.5" 
-            poster="https://via.placeholder.com/200x300" 
-          />
+        {popularMovies.length > 0 ? (
+          popularMovies.map(movie => (
+            <MovieCard 
+              key={movie.id} 
+              id={movie.id} 
+              title={movie.title} 
+              year={movie.release_date.split('-')[0]} 
+              rating={movie.rating} 
+              poster={movie.poster_path} 
+              platforms={movie.platforms} 
+              genreNames={getGenreNames(movie.genre_ids)}
+            />
+          ))
+        ) : (
+          <p>Cargando...</p>
+        )}
       </div>
     </div>
   );

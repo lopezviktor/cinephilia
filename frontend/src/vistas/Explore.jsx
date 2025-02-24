@@ -2,43 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import FilterBar from '../components/FilterBar/FilterBar';
 import MovieCard from '../components/MovieCard/MovieCard';
+import genres from '../assets/genres.json';
+import movies from '../assets/movies.json';
 import './Explore.css';
-
-// Películas de ejemplo (puedes reemplazar esto con una llamada a la API más adelante)
-const allMovies = [
-  {
-    id: 1,
-    title: 'The Matrix',
-    year: '1999',
-    rating: '8.7',
-    genre: 'SCI_FI',
-    poster: 'https://via.placeholder.com/200x300'
-  },
-  {
-    id: 2,
-    title: 'Inception',
-    year: '2010',
-    rating: '8.8',
-    genre: 'SCI_FI',
-    poster: 'https://via.placeholder.com/200x300'
-  },
-  {
-    id: 3,
-    title: 'Pulp Fiction',
-    year: '1994',
-    rating: '8.9',
-    genre: 'DRAMA',
-    poster: 'https://via.placeholder.com/200x300'
-  },
-  {
-    id: 4,
-    title: 'The Dark Knight',
-    year: '2008',
-    rating: '9.0',
-    genre: 'ACTION',
-    poster: 'https://via.placeholder.com/200x300'
-  }
-];
 
 function Explore() {
   const location = useLocation();
@@ -48,42 +14,50 @@ function Explore() {
   const year = queryParams.get('year');
   const rating = queryParams.get('rating');
 
-  const [filteredMovies, setFilteredMovies] = useState(allMovies);
+  const [filteredMovies, setFilteredMovies] = useState([]);
 
   useEffect(() => {
-    // Filtrado dinámico
-    let movies = allMovies;
+    setFilteredMovies(movies); // Inicialmente, mostrar todas las películas
+  }, []);
 
+  useEffect(() => {
+    let filtered = movies;
+  
     if (query) {
-      movies = movies.filter(movie => 
+      filtered = filtered.filter(movie => 
         movie.title.toLowerCase().includes(query.toLowerCase())
       );
     }
-
+    
     if (genre) {
-      movies = movies.filter(movie => movie.genre === genre);
+      filtered = filtered.filter(movie => movie.genre_ids.includes(parseInt(genre)));
     }
-
+    
     if (year) {
-      movies = movies.filter(movie => movie.year === year);
+      filtered = filtered.filter(movie => movie.release_date.startsWith(year));
     }
-
+    
     if (rating) {
-      movies = movies.filter(movie => parseFloat(movie.rating) >= parseFloat(rating));
+      filtered = filtered.filter(movie => parseFloat(movie.rating) >= parseFloat(rating));
     }
-
-    setFilteredMovies(movies);
+    
+    // Ordena por rating de mayor a menor
+    filtered.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+    
+    setFilteredMovies(filtered);
   }, [query, genre, year, rating]);
+
+  const getGenreNames = (genreIds) => {
+    return genreIds.map(id => {
+      const genre = genres.find(g => g.id === id);
+      return genre ? genre.name : '';
+    }).join(', ');
+  };
 
   return (
     <div>
       <h1>Explorar 🎥</h1>
       <FilterBar />
-      <p>Resultados de búsqueda para: <strong>{query}</strong></p>
-      <p>Género: {genre || 'Todos'}</p>
-      <p>Año: {year || 'Cualquiera'}</p>
-      <p>Calificación mínima: {rating || 'Ninguna'}</p>
-      
       <div className="movies-grid">
         {filteredMovies.length > 0 ? (
           filteredMovies.map(movie => (
@@ -91,9 +65,11 @@ function Explore() {
               key={movie.id} 
               id={movie.id} 
               title={movie.title} 
-              year={movie.year} 
+              year={movie.release_date.split('-')[0]} 
               rating={movie.rating} 
-              poster={movie.poster} 
+              poster={movie.poster_path} 
+              platforms={movie.platforms} 
+              genreNames={getGenreNames(movie.genre_ids)}
             />
           ))
         ) : (

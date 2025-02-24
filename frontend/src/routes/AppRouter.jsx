@@ -12,11 +12,12 @@ const AppRouter = () => {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} exact />
         <Route path="/explore" element={<Explore />} />
         <Route path="/movie/:id" element={<MovieDetail />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/explore/:genre?" element={<Explore />} />
       </Routes>
     </Router>
   );

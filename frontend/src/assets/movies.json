@@ -1,0 +1,157 @@
+[
+  {
+    "id": 1,
+    "title": "The Matrix",
+    "overview": "Un hacker descubre la verdad sobre su realidad.",
+    "release_date": "1999-03-31",
+    "genre_ids": [28, 878],
+    "rating": 8.7,
+    "poster_path": "https://picsum.photos/200/300",
+    "platforms": [
+      {
+        "provider_id": 8,
+        "provider_name": "Netflix",
+        "logo_path": "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg"
+      },
+      {
+        "provider_id": 119,
+        "provider_name": "Disney Plus",
+        "logo_path": "/emthp39XA2YScoYL1p0sdbAH2WA.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Inception",
+    "overview": "Un ladrón que roba secretos a través de sueños.",
+    "release_date": "2010-07-16",
+    "genre_ids": [28, 878, 53],
+    "rating": 8.8,
+    "poster_path": "https://picsum.photos/200/300",
+    "platforms": [
+      {
+        "provider_id": 8,
+        "provider_name": "Netflix",
+        "logo_path": "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg"
+      },
+      {
+        "provider_id": 9,
+        "provider_name": "Amazon Prime",
+        "logo_path": "/emthp39XA2YScoYL1p0sdbAH2WA.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Pulp Fiction",
+    "overview": "Historias entrelazadas de crimen en Los Ángeles.",
+    "release_date": "1994-10-14",
+    "genre_ids": [80, 35, 53],
+    "rating": 8.9,
+    "poster_path": "https://picsum.photos/200/300",
+    "platforms": [
+      {
+        "provider_id": 119,
+        "provider_name": "Disney Plus",
+        "logo_path": "/emthp39XA2YScoYL1p0sdbAH2WA.jpg"
+      },
+      {
+        "provider_id": 384,
+        "provider_name": "HBO Max",
+        "logo_path": "/nm8d7P7MJNiBLdgIzUK0gkuEA4r.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "The Dark Knight",
+    "overview": "Batman enfrenta al Joker en Gotham.",
+    "release_date": "2008-07-18",
+    "genre_ids": [28, 80, 18],
+    "rating": 9.0,
+    "poster_path": "https://picsum.photos/200/300",
+    "platforms": [
+      {
+        "provider_id": 8,
+        "provider_name": "Netflix",
+        "logo_path": "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg"
+      },
+      {
+        "provider_id": 384,
+        "provider_name": "HBO Max",
+        "logo_path": "/nm8d7P7MJNiBLdgIzUK0gkuEA4r.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Interstellar",
+    "overview": "Un grupo de astronautas busca un nuevo hogar.",
+    "release_date": "2014-11-07",
+    "genre_ids": [12, 878, 18],
+    "rating": 8.6,
+    "poster_path": "https://picsum.photos/200/300",
+    "platforms": [
+      {
+        "provider_id": 9,
+        "provider_name": "Amazon Prime",
+        "logo_path": "/emthp39XA2YScoYL1p0sdbAH2WA.jpg"
+      },
+      {
+        "provider_id": 119,
+        "provider_name": "Disney Plus",
+        "logo_path": "/emthp39XA2YScoYL1p0sdbAH2WA.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "The Lion King",
+    "overview": "Un león joven debe reclamar su trono.",
+    "release_date": "1994-06-24",
+    "genre_ids": [16, 10751, 18],
+    "rating": 8.5,
+    "poster_path": "https://picsum.photos/200/300",
+    "platforms": ["disney"]
+  },
+  {
+    "id": 7,
+    "title": "Forrest Gump",
+    "overview": "La vida extraordinaria de un hombre ordinario.",
+    "release_date": "1994-07-06",
+    "genre_ids": [35, 18, 10749],
+    "rating": 8.8,
+    "poster_path": "https://picsum.photos/200/300",
+    "platforms": ["prime", "hbo"]
+  },
+  {
+    "id": 8,
+    "title": "Fight Club",
+    "overview": "Un hombre se une a un club de peleas secreto.",
+    "release_date": "1999-10-15",
+    "genre_ids": [18, 53],
+    "rating": 8.8,
+    "poster_path": "https://picsum.photos/200/300",
+    "platforms": ["netflix"]
+  },
+  {
+    "id": 9,
+    "title": "The Godfather",
+    "overview": "La historia de una poderosa familia criminal.",
+    "release_date": "1972-03-24",
+    "genre_ids": [80, 18],
+    "rating": 9.2,
+    "poster_path": "https://picsum.photos/200/300",
+    "platforms": ["prime"]
+  },
+  {
+    "id": 10,
+    "title": "The Shawshank Redemption",
+    "overview": "Un hombre inocente encuentra esperanza en prisión.",
+    "release_date": "1994-09-23",
+    "genre_ids": [18, 80],
+    "rating": 9.3,
+    "poster_path": "https://picsum.photos/200/300",
+    "platforms": ["hbo"]
+  }
+]

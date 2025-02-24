@@ -1,0 +1,29 @@
+.streaming-availability {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .streaming-availability h4 {
+    margin: 0;
+    font-size: 1.1em;
+  }
+  
+  .platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  
+  .platform {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9em;
+  }
