@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
+import genres from '../assets/genres.json';
 
 const FavoritesContext = createContext();
 
@@ -13,10 +14,26 @@ export const FavoritesProvider = ({ children }) => {
     }, [favorites]);
 
     const addFavorite = (movie) => {
+        // Si `genre_ids` no existe, intenta obtenerlo de `genreNames`
+        const genreIdsFromNames = movie.genreNames 
+            ? movie.genreNames.split(', ').map(name => {
+                const genre = genres.find(g => g.name === name);
+                return genre ? Number(genre.id) : null;
+            }).filter(id => id !== null)
+            : [];
+    
+        const movieToSave = {
+            ...movie,
+            genre_ids: Array.isArray(movie.genre_ids) && movie.genre_ids.length > 0
+                ? movie.genre_ids.map(id => Number(id))  // Asegura que sean números
+                : genreIdsFromNames  // Si no hay `genre_ids`, intenta obtenerlos de `genreNames`
+        };
+    
+        console.log("Guardando en favoritos:", movieToSave);
+    
         setFavorites((prevFavorites) => {
-            // Verifica si ya está en favoritos
             if (!prevFavorites.some(fav => fav.id === movie.id)) {
-                return [...prevFavorites, movie];
+                return [...prevFavorites, movieToSave];
             }
             return prevFavorites;
         });
