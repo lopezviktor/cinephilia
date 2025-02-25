@@ -18,11 +18,14 @@ function MovieCard({ id, title, year, rating, poster, platforms, genreNames }) {
   
     return (
       <div className="movie-card">
-        <img 
-          src={poster || 'https://via.placeholder.com/200x300'} 
-          alt={title} 
-          className="movie-poster" 
-        />
+        <Link to={`/movie/${id}`} className="movie-link">
+          <img 
+            src={poster || 'https://via.placeholder.com/200x300'} 
+            alt={title} 
+            className="movie-poster" 
+          />
+          <h3 className="movie-title">{title}</h3>
+        </Link>
         <div className="movie-info">
           <h3 className="movie-title">{title}</h3>
           <p className="movie-year">{year}</p>

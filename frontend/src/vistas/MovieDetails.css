@@ -1,0 +1,77 @@
+.movie-details-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .movie-details-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .movie-poster {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 254, 254, 0.3);
+  }
+  
+  .movie-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .movie-title {
+    font-size: 36px;
+    color: #ffcc00;
+    margin: 0;
+  }
+  
+  .movie-year,
+  .movie-rating,
+  .movie-genres {
+    font-size: 18px;
+    color: #ccc;
+    margin: 5px 0;
+  }
+  
+  .platforms {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .platform-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .movie-details-body {
+    margin-top: 20px;
+  }
+  
+  .synopsis-title {
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 10px;
+  }
+  
+  .synopsis-content {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;
+  }
